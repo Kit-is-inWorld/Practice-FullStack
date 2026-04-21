@@ -1,8 +1,35 @@
-<h1 id="title">Hello</h1>
-<button id="btn">กดดิ</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test JS</title>
+</head>
+<body>
 
-<script>
-  document.getElementById("btn").addEventListener("click", () => {
-    alert("กดแล้ว!");
-  });
-</script>
+  <h1 id="title">Hello</h1>
+  <button id="btnHello">กดดิ</button>
+
+  <h1 id="count">0</h1>
+  <button id="btnAdd">เพิ่ม</button>
+  <button id="minus">ลด</button>
+
+  <script>
+    let count = 0;
+
+    document.getElementById("btnHello").addEventListener("click", () => {
+      document.getElementById("title").textContent = "เปลี่ยนแล้ว!";
+    });
+
+    document.getElementById("btnAdd").addEventListener("click", () => {
+      count++;
+      document.getElementById("count").textContent = count;
+    });
+
+    document.getElementById("minus").addEventListener("click", () => {
+      count--;
+      document.getElementById("count").textContent = count;
+    });
+  </script>
+
+</body>
+</html>
